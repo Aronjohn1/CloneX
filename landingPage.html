@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Home</title>
+    <link rel="stylesheet" href="LandingPage.css">
+    <link rel="icon" href="twitter.png" type="image/png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+
+    <div class="container">
+        <header>
+
+        </header>
+        <nav>
+          <div class="logo">X</div>
+        </nav>
+        <aside>
+      <div class="hold-text">
+        <div class="second-logo">X</div>
+        <h1>Happening now</h1>
+  
+        
+      </div>
+      <div class="hold-text add">
+        <h1 class="sec-text" id="h1">Join today.</h1>
+        <button id="tog-btn">
+          <span class="moon"></span>
+          
+        </button>
+        <button class="btn-create" onclick="SignInYourGoogleAccount()"><i class="fa-solid fa-user"></i><h2>Sign in your account</h2> <i class="fa-brands fa-google"></i></button>
+
+          <button class="btn-sec" onclick="SignUpApple()"><i class="fa-brands fa-apple"></i><h3>Sign up with Apple</h3> </button>
+          <div class="box-or">
+            <hr class="line"><h5>OR</h5><hr class="line">
+          </div>
+          
+          <button class="btn-sec blue" onclick="createAccount()"><h3>Create account</h3> </button>
+          <div class="popup-overlay" id="popup">
+     
+            <div class="popup-box">
+  
+              <button onclick="closePopup()" class="close"><i class="fa-solid fa-xmark"></i></button>
+              <div class="third-logo">X</div>
+              <h2>Create Your Account</h2>
+            
+              <div class="input-container">
+                <input id="name" type="text" placeholder=" " required />
+                <label for="name">Name</label>
+              </div>
+            
+              <div class="input-container">
+                <input id="email" type="email" placeholder=" " required />
+                <label for="email">Email</label>
+              </div>
+              <div class="two-text">
+                <h2>Date of birth</h2>
+                <b>This will not be shown publicly. Confirm your own age, even if this account is for a business, a pet, or something else.</b>
+              </div>
+             
+              <div  class="orasan">
+
+             
+
+              <select id="month">
+                <option value="">Month</option>
+                  <option value="0">January</option>
+                  <option value="1">February</option>
+                  <option value="2">March</option>
+                  <option value="3">April</option>
+                  <option value="4">May</option>
+                  <option value="5">June</option>
+                  <option value="6">July</option>
+                  <option value="7">August</option>
+                  <option value="8">September</option>
+                  <option value="9">October</option>
+                  <option value="10">November</option>
+                  <option value="11">December</option>
+              </select>
+              <select id="year">
+                <option value="">Year</option>
+            </select>
+               
+                  <select id="day">
+                      <option value="">Day</option>
+                  </select>
+                </div>
+          
+                  <div id="result"></div>
+            
+                  <button class="blue" id="nextBtn" onclick="goToNextStep()">Next</button>
+
+          
+                 
+                  
+
+            </div>
+            <div class="popup-box step2">
+              <button onclick="closePopup()" class="close"><i class="fa-solid fa-xmark"></i></button>
+              <div class="third-logo">X</div>
+              <h2>Enter your password</h2>
+            
+            
+              <div class="input-container">
+                <input type="password" placeholder=" " id="password" />
+                <label for="password">Password</label>
+                <i class="fa-solid fa-eye toggle-icon"  onclick="togglePassword(this)"></i>
+              </div>
+            
+        
+              <button class="blue done" onclick="submitPassword()">Done</button>
+
+            </div>
+            
+            <div class="popup-box signin-box">
+              <div class="third-logo">X</div>
+              <button onclick="closePopup()" class="close"><i class="fa-solid fa-xmark"></i></button>
+              <h2>Sign In</h2>
+            
+              <div class="input-container">
+                <input type="email" id="signinEmail" placeholder=" " required />
+                <label for="signinEmail">Email</label>
+              </div>
+            
+              <div class="input-container">
+                <input type="password" id="signinPassword" placeholder=" " required />
+                <label for="signinPassword">Password</label>
+                <i class="fa-solid fa-eye toggle-icon"  onclick="togglePassword(this)"></i>
+
+              </div>
+              
+          
+
+           
+              <button  onclick="signIn()" class="login">Sign In</button>
+              
+           
+            </div>
+            
+            
+            
+            
+          </div>
+    
+
+          <button class="btn-tre" onclick="createAccount()"><p>By signing up, you agree to the <span>Terms of Service </span>and <span>Privacy Policy,</span>including <span>Cookie Use.</span></p></button>
+
+
+  <div class="box-text">
+    <h1>Already have an account?</h1>
+  </div>
+
+
+  
+  <button class="btn-sign" onclick="SignIn()"><h3>Sign in</h3> </button>
+
+
+
+      </div>
+
+     
+
+        </aside>
+
+
+        <footer>
+    <h6>About
+      |
+     Download the X app
+      |
+     Grok
+      |
+     Help Center
+      |
+     Terms of Service
+      |
+  
+     Privacy Policy
+      |
+     Cookie Policy
+      |
+     Accessibility
+      |
+     Ads info
+      |
+     Blog
+      |
+     Careers
+      |
+    
+     Brand 
+     Resources
+      |
+     Advertising
+      |
+     Marketing
+      |
+ 
+     X for Business
+      |
+     Developers
+      |
+  
+     Directory
+      |
+     Settings
+      |
+     © 2025 X Corp.</h6>
+        </footer>
+      </div>
+
+      <script src="landing.js"></script>
+    
+</body>
+</html>
